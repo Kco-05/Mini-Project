@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Syllabus Viewer — Login</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			/* Page-specific small adjustments to match site aesthetic */
+			.login-page {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(10,10,30,1) 100%);
+				color: var(--light);
+			}
+			.login-card {
+				background: rgba(255,255,255,0.03);
+				border: 1px solid rgba(255,255,255,0.06);
+				padding: 2.25rem;
+				border-radius: 14px;
+				width: 420px;
+				max-width: calc(100% - 32px);
+				box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+				text-align: center;
+			}
+			.login-title {
+				font-family: 'Abril Fatface', serif;
+				font-size: 36px;
+				margin: 0 0 0.5rem 0;
+				color: white;
+			}
+			.login-sub { color: rgba(255,255,255,0.75); margin-bottom: 1rem; }
+			.login-form { display:flex; gap:0.75rem; align-items:center; justify-content:center; margin-top:1rem; }
+			.login-form select {
+			
+				padding: 0.6rem 1rem;
+				border-radius: 12px;
+			
+	
+				color: var(--light);
+				font-size: 1rem;
+			}
+			.login-form button {
+				padding: 0.6rem 1.2rem;
+				border-radius: 12px;
+				border: none;
+				background: var(--secondary);
+				color: var(--dark);
+				font-weight: 700;
+				cursor: pointer;
+				transition: transform .15s ease, box-shadow .15s ease;
+			}
+			.login-form button:active { transform: translateY(1px); }
+			@media (max-width:480px){
+				.login-card{ padding:1.25rem; }
+				.login-title{ font-size:28px; }
+				.login-form{ flex-direction:column; }
+				.login-form select, .login-form button{ width:100%; }
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="login-page">
+			<div class="login-card">
+				<div class="branding">
+					<div class="login-title"><h1 class="page-title" style="font-family:Abril Fatface ,serif;font-weight: 400;font-style: normal;font-size: 100px;">Syllabus Viewer</h1></div>
+					<div class="login-sub">Select the semester</div>
+				</div>
+
+				<form id="loginForm" class="login-form" onsubmit="return doLogin(event)">
+					<label for="sem" class="sr-only">Semester</label>
+					<select id="sem" name="sem" aria-label="Select semester" style="background-color: black;">
+						<option value="">Select Sem</option>
+						<option value="1">Sem 1</option>
+						<option value="2">Sem 2</option>
+						<option value="3">Sem 3</option>
+						<option value="4">Sem 4</option>
+						<option value="5">Sem 5</option>
+						<option value="6">Sem 6</option>
+						<option value="7">Sem 7</option>
+						<option value="8">Sem 8</option>
+					</select>
+					<button type="submit">Proceed</button>
+				</form>
+
+				<p style="margin-top:1rem; font-size:0.9rem; color:rgba(255,255,255,0.55)">Quick access to subject portions</p>
+			</div>
+		</div>
+
+		<script>
+			function doLogin(e){
+				e.preventDefault();
+				const sel = document.getElementById('sem');
+				const val = sel.value;
+				if(!val){
+					sel.focus();
+					return false;
+				}
+				// store selected semester so the main page can read it (optional)
+				try{ localStorage.setItem('selectedSem', val); }catch(e){}
+				// redirect to homepage
+				window.location.href = 'index2.html';
+				return false;
+			}
+		</script>
+	</body>
+</html>

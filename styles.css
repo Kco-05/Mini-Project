@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+}
+
+
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Serif', serif;
+  background: linear-gradient(180deg, #000000 0%, #0a0a23 100%);
+  /* You can adjust the colors above for your preferred shade */
+}
+
+
+
+#header{
+    background-color: rgba(105, 207, 241, .9);
+    min-height: 60px;
+    height: fit-content ;
+    width: 100%;
+    position: relative ;
+    box-shadow: 0px 5px 30px rgb(255, 255, 255);
+    align-items: center;
+    opacity: transparent;
+    
+    
+}
+
+
+
+#h_ul{
+    position: relative;
+    color: black;
+    display: flex;
+    float: right;
+    list-style: none;
+    height: 100%;
+
+    
+}
+.h_ul_li{
+    
+    font-family: cursive,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+    font-size: 17px; 
+
+    
+}
+
+.h_ul_li:hover,#logo:hover{
+    
+    transform: matrix(1.075,0,0,1.075,0,0);
+    transition: all 0.3s ease-in-out;
+}
+
+.aa{
+    text-decoration: none;
+    color:rgb(58, 5, 117);
+    cursor: pointer;
+}
+
+
+#logo{
+    height: 50px;
+    padding: 5px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+}
+
+    
+#logo_name{
+    display: inline-block;
+    height: 50px;
+    line-height: 60px;                                                                      /* centers single-line text vertically */
+    vertical-align: middle;
+    margin-left: 8px;
+    font-size: 30px;
+    font-family: "Quintessential",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(58, 5, 117);
+    
+    
+}
+
+
+/* HEADER END*/
+
+
+#container{
+    /* background-color: brown; */
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgb(17, 17, 39) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+
+
+    max-width: 1150px;
+    min-width: 200px    ;
+    min-height: 500px;
+    margin: 5%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#subc2:hover,
+#subc2:focus-within {
+    box-shadow: 0px 0px 20px rgb(0, 255, 255);
+    transform: scale(1.02,1.02);
+    background: rgba(63, 226, 255, 0.065);
+    transition: all 0.5s ease-in-out;
+    
+
+}
+
+#wlcmtxt{
+
+    font-family: "Monoton", serif;
+    font-style: normal;
+    font-size: 5.5rem;
+    font-weight: bolder;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: left;
+    color: aqua;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0),0px 0px 10px darkblue;
+
+}
+
+@media (max-width: 768px) {
+  #wlcmtxt{
+    font-size: 4rem; 
+    text-align: center;  }
+}
+
+@media (max-width: 600px) {
+  #wlcmtxt {
+    font-size: 3rem; /* smaller size for mobile */
+    /* text-align: center; */
+  }
+}
+
+
+.subc{
+    /* background-color: aqua; */
+    
+    margin: 1%;
+    border-radius: 50px 0px 50px 0px;  
+    flex-grow: 1; 
+    flex-basis: 200; 
+    min-width: 25px;
+    max-width: 500px;
+}
+
+#subc2  {
+    background: transparent;
+    backdrop-filter: blur(3px);
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px rgb(1, 217, 255)   ;
+    
+}
+
+.input-field input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-width: 0px 0px 1px 0px;
+    
+    font-size: 16px;
+    color: white;
+    
+}
+
+#log_txt{
+    text-align: center;
+    font-size: 25px;
+    font-family: cursive,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 25px;
+    color: white;
+    font-weight: bolder;
+}
+.input-field{
+    position: relative;
+
+    margin: 30px 0;
+    padding: 5%;
+}
+input:focus{
+    border: none;  
+}
+.input-field input:focus~label,
+.input-field input:valid~label{
+    font-size:08.rem;
+    top: 10px;
+    transform:traslateY(-120%);
+}
+
+#log_btn{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(173, 216, 230);
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 15px 0px 15px 0px;
+    cursor: pointer;
+}
+
+#log_btn:hover{
+    background-color: rgb(123, 204, 231);
+    color: black;
+    box-shadow: 0px 0px 10px rgb(0, 255, 255);
+    transform: scale(1.02,1.02);
+    transition-duration: .5s;
+}
+
+.log_link{
+    text-decoration: none;
+     color: white;
+}
+.log_link:hover{
+    text-decoration: underline;
+    color: rgb(142, 197, 197);
+    transform: scale(1.02,1.02);
+
+}
+
+
+/* CONTAINER END */
+
+/* Sign-up Page */
+
+

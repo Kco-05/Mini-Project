@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <title>Syllabus-viewer.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="./sem-selection.html">Sem</a></li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <form id="searchForm" class="search-form" role="search" onsubmit="return handleSearch(event)">
+                <input id="searchInput" type="search" placeholder="Search subject..." aria-label="Search subject">
+                <button type="submit">Search</button>
+            </form>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    
+  <main class="main">
+    <section id="home" class="section home">
+      <div class="section-container">
+        <h1 class="page-title" style="font-family:Abril Fatface ,serif;font-weight: 400;font-style: normal;font-size: 100px;">Syllabus Viewer</h1>
+        <p class="lead">Choose a subject to view its syllabus or use the search box in the header.</p>
+
+        <div class="controls">
+          <select id="subjectSelect" onchange="displaySyllabus()">
+            <option value="">-- Select Subject --</option>
+            <option>Maths</option>
+            <option>COA</option>
+            <option>Java</option>
+            <option>FEWD</option>
+            <option>DSA</option>
+            <option>R LAB</option>
+            <option>IDT</option>
+            <option>DPS</option>
+            <option>EOIC</option>
+          </select>
+        </div>
+
+        <div id="syllabusBox" class="syllabus-box" aria-live="polite">
+          Select a subject to view its syllabus...
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-container">
+        <h1>About</h1>
+
+        <h2 style="font-family:Abril Fatface ,serif;font-weight: 400;font-style: normal;font-size:40px;">Syllabus-viewer.com</h2>
+        <p style="font-family:Abril Fatface ,serif;font-weight: 100;font-style: normal;font-size: 20px;">No more asking your friend for the portion one day before the exam</p>
+        <p>We have carefully curated the syllabus in such a way to only display key and important  topics for MSE and SEE </p>
+
+
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-container">
+        <h1>Contact</h1>
+        <h2>Get in touch with our team</h2>
+            <section id="team" class="py-5">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" style="text-align: center;">
+          
+          
+        </div>
+        
+        <div class="team-carousel" data-aos="fade-up">
+          <div class="custom-carousel-inner">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      </div>
+    </section>
+  </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container" style="text-align: center;">
+        
+    
+            <p class="mb-0" style="padding-top:20px ;">&copy; 2025 syllabus-viewer. All rights reserved.</p>
+          </div>
+    </footer>
+
+    
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+    </script>
+<script src="script.js"></script>
+  </body>
+</html>
