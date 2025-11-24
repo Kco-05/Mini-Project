@@ -1,23 +1,25 @@
     function validateForm() {
       const username = document.getElementById("name").value.trim();
       const password = document.getElementById("pwd").value;
-      const email=document.getElementById("email").value.trim();
-      
-        if (username === "" || pwd === "" || email==="") {
+      const emailEl = document.getElementById("email");
+      const email = emailEl ? emailEl.value.trim() : "";   
+        if (username === "" || password === ""|| emailEl==="") {
             alert("Please fill in all fields.");
             return false; // Prevent form submission
-        }
-        if (username.length < 4) {
+          }
+          if (username.length < 4) {
             alert("Username must be at least 4 characters long.");
             return false; // stop form submit
-        }
-
+          }
+        
+      
         if (password.length < 8) {
             alert("Password must be at least 8 characters long.");
             return false; // stop form submit
         }
       
-
+       
+        
       // if everything is fine, allow form to submit
       return true;
     }
