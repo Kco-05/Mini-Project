@@ -3,7 +3,7 @@
       const password = document.getElementById("pwd").value;
       const emailEl = document.getElementById("email");
       const email = emailEl ? emailEl.value.trim() : "";   
-        if (username === "" || password === ""|| emailEl==="") {
+        if (username === "" || password === ""|| (email===""&&emailEl)) {
             alert("Please fill in all fields.");
             return false; // Prevent form submission
           }
